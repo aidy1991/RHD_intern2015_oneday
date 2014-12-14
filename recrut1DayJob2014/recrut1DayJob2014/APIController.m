@@ -29,7 +29,7 @@
     //送信するパラメータの組み立て
     NSMutableURLRequest *request;
     NSString *encodedKeyword = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)word,NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8 ));
-    NSString *requestURL = [NSString stringWithFormat:@"%@?format=json&key=%@&keyword=%@&count=%d", url_, key_, encodedKeyword, COUNT];
+    NSString *requestURL = [NSString stringWithFormat:@"%@?format=json&key=%@&keyword=%@&count=%d&start=%d", url_, key_, encodedKeyword, COUNT, offset];
     NSLog(requestURL);
     request =
     [NSMutableURLRequest requestWithURL:[NSURL URLWithString:requestURL]

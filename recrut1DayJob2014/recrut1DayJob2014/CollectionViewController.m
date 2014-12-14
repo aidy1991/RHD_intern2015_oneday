@@ -20,6 +20,7 @@
     dispatch_queue_t sub_queue_;
     APIController *apiController;
     AppDelegate *appDelegate;
+    UIButton *changeButton;
 }
 
 static NSString * const reuseIdentifier = @"Cell";
@@ -37,6 +38,9 @@ static NSString * const reuseIdentifier = @"Cell";
         appDelegate.likedImageViews = [NSMutableArray array];
     }
     
+    //ボタンの準備
+    //changeButton = [[UIButton alloc] initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -52,40 +56,8 @@ static NSString * const reuseIdentifier = @"Cell";
     // サブスレッドで実行するキューを定義する
     sub_queue_ = dispatch_queue_create("sadp.team.sink.toiletApi", 0);
     
-    
-    // 並列処理開始
-    dispatch_async(sub_queue_, ^{
-        //ここはサブスレッド
-        NSString *json = [apiController call:@"東京" offset:12];
-        
-        dispatch_async(main_queue_, ^{
-            // ここはメインスレッド
-            // APIを叩いたあとの処理をここへ記述
-            if([json isEqualToString:@"{}"]){ return ;}
-            //NSLog(@"%@", json);
-            NSMutableArray *images = [self getImageURLsFromJson:json];
-            NSLog(@"%@", images);
-            
-            //imageURLsを空に
-            [imageURLs_ removeAllObjects];
-            for (NSString *url in images) {
-                
-                NSData *dt = [NSData dataWithContentsOfURL:
-                              [NSURL URLWithString:url]];
-                UIImage *image = [[UIImage alloc] initWithData:dt];
-                double isTate = image.size.height > image.size.width;
-                double widthRatio = (isTate) ? image.size.width / image.size.height : 1;
-                double heightRatio = (isTate) ? 1 : image.size.height / image.size.width;
+    [self loadImages];
 
-                
-                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMAGE_SIZE * widthRatio, IMAGE_SIZE * heightRatio)];
-                imageView.image = image;
-                [imageURLs_ addObject:imageView];
-            }
-            
-            [self.collectionView reloadData];
-        });
-    });
     
 
 }
@@ -128,6 +100,12 @@ static NSString * const reuseIdentifier = @"Cell";
     if(imageURLs_ != nil){
         UIImageView *imageView = imageURLs_[indexPath.row];
         //cell.backgroundColor = [UIColor blueColor];
+        
+        //cellのsubviewをすべて削除
+        for (UIView *view in [cell subviews]) {
+            [view removeFromSuperview];
+        }
+        
         [cell addSubview:imageView];
     }
     return cell;
@@ -196,5 +174,50 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     return imageURLs;
+}
+
+- (void) loadImages{
+    // 並列処理開始
+    dispatch_async(sub_queue_, ^{
+        //ここはサブスレッド
+        NSInteger offset = random() % 10;
+        NSArray *place = [NSArray arrayWithObjects:@"東京", @"名古屋", @"大阪", @"京都", @"神奈川", @"沖縄", nil];
+        NSInteger placeRandom = random() % [place count];
+        NSString *json = [apiController call:place[placeRandom  ] offset:offset];
+        
+        dispatch_async(main_queue_, ^{
+            // ここはメインスレッド
+            // APIを叩いたあとの処理をここへ記述
+            if([json isEqualToString:@"{}"]){ return ;}
+            //NSLog(@"%@", json);
+            NSMutableArray *images = [self getImageURLsFromJson:json];
+            NSLog(@"%@", images);
+            
+            //imageURLsを空に
+            [imageURLs_ removeAllObjects];
+            for (NSString *url in images) {
+                
+                NSData *dt = [NSData dataWithContentsOfURL:
+                              [NSURL URLWithString:url]];
+                UIImage *image = [[UIImage alloc] initWithData:dt];
+                double isTate = image.size.height > image.size.width;
+                double widthRatio = (isTate) ? image.size.width / image.size.height : 1;
+                double heightRatio = (isTate) ? 1 : image.size.height / image.size.width;
+                
+                
+                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMAGE_SIZE * widthRatio, IMAGE_SIZE * heightRatio)];
+                imageView.image = image;
+                [imageURLs_ addObject:imageView];
+            }
+            
+            [self.collectionView reloadData];
+        });
+    });
+}
+
+- (IBAction)refresh:(id)sender {
+    [self loadImages];
+    [self.collectionView reloadData];
+    NSLog(@"refresh");
 }
 @end

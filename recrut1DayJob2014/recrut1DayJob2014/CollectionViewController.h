@@ -12,6 +12,8 @@
 #import "AppDelegate.h"
 
 @interface CollectionViewController : UICollectionViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
 - (NSArray *) getImageURLsFromJson:(NSString *)json;
+- (void) loadImages;
 
 @end
