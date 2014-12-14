@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E0C4CAC0-9E97-471E-8C08-3E1685E28EDF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>recrut1DayJob2014</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>983BC5807CD623A27B6C3334346C0EA96CB13988</key>
+		<string>https://github.com/RHDHR/rhdiOS02.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>recrut1DayJob2014/recrut1DayJob2014.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>983BC5807CD623A27B6C3334346C0EA96CB13988</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/RHDHR/rhdiOS02.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>983BC5807CD623A27B6C3334346C0EA96CB13988</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>983BC5807CD623A27B6C3334346C0EA96CB13988</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rhdiOS02</string>
+		</dict>
+	</array>
+</dict>
+</plist>
