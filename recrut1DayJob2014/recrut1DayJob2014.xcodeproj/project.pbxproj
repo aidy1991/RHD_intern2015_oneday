@@ -15,6 +15,8 @@
 		5D4B61061A3D4F21001C91DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B61051A3D4F21001C91DE /* Images.xcassets */; };
 		5D4B61091A3D4F21001C91DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B61071A3D4F21001C91DE /* LaunchScreen.xib */; };
 		5D4B61151A3D4F21001C91DE /* recrut1DayJob2014Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B61141A3D4F21001C91DE /* recrut1DayJob2014Tests.m */; };
+		5D4B61201A3D5246001C91DE /* APIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B611E1A3D5246001C91DE /* APIController.m */; };
+		5D4B61221A3D526B001C91DE /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B61211A3D526B001C91DE /* Const.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		5D4B610E1A3D4F21001C91DE /* recrut1DayJob2014Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recrut1DayJob2014Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4B61131A3D4F21001C91DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D4B61141A3D4F21001C91DE /* recrut1DayJob2014Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = recrut1DayJob2014Tests.m; sourceTree = "<group>"; };
+		5D4B611E1A3D5246001C91DE /* APIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIController.m; sourceTree = "<group>"; };
+		5D4B611F1A3D5246001C91DE /* APIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIController.h; sourceTree = "<group>"; };
+		5D4B61211A3D526B001C91DE /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +95,11 @@
 				5D4B60FD1A3D4F21001C91DE /* FirstViewController.m */,
 				5D4B60FF1A3D4F21001C91DE /* SecondViewController.h */,
 				5D4B61001A3D4F21001C91DE /* SecondViewController.m */,
+				5D4B611E1A3D5246001C91DE /* APIController.m */,
+				5D4B611F1A3D5246001C91DE /* APIController.h */,
 				5D4B61021A3D4F21001C91DE /* Main.storyboard */,
 				5D4B61051A3D4F21001C91DE /* Images.xcassets */,
+				5D4B61211A3D526B001C91DE /* Const.m */,
 				5D4B61071A3D4F21001C91DE /* LaunchScreen.xib */,
 				5D4B60F51A3D4F21001C91DE /* Supporting Files */,
 			);
@@ -225,7 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4B61011A3D4F21001C91DE /* SecondViewController.m in Sources */,
+				5D4B61201A3D5246001C91DE /* APIController.m in Sources */,
 				5D4B60FB1A3D4F21001C91DE /* AppDelegate.m in Sources */,
+				5D4B61221A3D526B001C91DE /* Const.m in Sources */,
 				5D4B60FE1A3D4F21001C91DE /* FirstViewController.m in Sources */,
 				5D4B60F81A3D4F21001C91DE /* main.m in Sources */,
 			);
