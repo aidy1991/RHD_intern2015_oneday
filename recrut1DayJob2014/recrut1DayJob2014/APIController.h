@@ -12,6 +12,6 @@
 
 
 @interface APIController : NSObject
-- (id) initWithUrl:(NSURL *)url;
-- (NSString *) call:(NSMutableArray *) meshArray;
+- (id) initWithUrl:(NSString *)url key:(NSString *)key;
+- (NSString *) call:(NSString *) word offset:(NSInteger)offset;
 @end

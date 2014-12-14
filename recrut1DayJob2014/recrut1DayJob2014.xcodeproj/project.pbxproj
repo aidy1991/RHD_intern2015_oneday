@@ -17,6 +17,8 @@
 		5D4B61151A3D4F21001C91DE /* recrut1DayJob2014Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B61141A3D4F21001C91DE /* recrut1DayJob2014Tests.m */; };
 		5D4B61201A3D5246001C91DE /* APIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B611E1A3D5246001C91DE /* APIController.m */; };
 		5D4B61221A3D526B001C91DE /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B61211A3D526B001C91DE /* Const.m */; };
+		5D4B61251A3D6CB1001C91DE /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B61241A3D6CB1001C91DE /* CollectionViewController.m */; };
+		5D4B61281A3D7C7D001C91DE /* LikedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B61271A3D7C7D001C91DE /* LikedCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		5D4B611E1A3D5246001C91DE /* APIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIController.m; sourceTree = "<group>"; };
 		5D4B611F1A3D5246001C91DE /* APIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIController.h; sourceTree = "<group>"; };
 		5D4B61211A3D526B001C91DE /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		5D4B61231A3D6CB1001C91DE /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		5D4B61241A3D6CB1001C91DE /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		5D4B61261A3D7C7D001C91DE /* LikedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikedCollectionViewController.h; sourceTree = "<group>"; };
+		5D4B61271A3D7C7D001C91DE /* LikedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikedCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,10 @@
 				5D4B61211A3D526B001C91DE /* Const.m */,
 				5D4B61071A3D4F21001C91DE /* LaunchScreen.xib */,
 				5D4B60F51A3D4F21001C91DE /* Supporting Files */,
+				5D4B61231A3D6CB1001C91DE /* CollectionViewController.h */,
+				5D4B61241A3D6CB1001C91DE /* CollectionViewController.m */,
+				5D4B61261A3D7C7D001C91DE /* LikedCollectionViewController.h */,
+				5D4B61271A3D7C7D001C91DE /* LikedCollectionViewController.m */,
 			);
 			path = recrut1DayJob2014;
 			sourceTree = "<group>";
@@ -233,10 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4B61011A3D4F21001C91DE /* SecondViewController.m in Sources */,
+				5D4B61251A3D6CB1001C91DE /* CollectionViewController.m in Sources */,
 				5D4B61201A3D5246001C91DE /* APIController.m in Sources */,
 				5D4B60FB1A3D4F21001C91DE /* AppDelegate.m in Sources */,
 				5D4B61221A3D526B001C91DE /* Const.m in Sources */,
 				5D4B60FE1A3D4F21001C91DE /* FirstViewController.m in Sources */,
+				5D4B61281A3D7C7D001C91DE /* LikedCollectionViewController.m in Sources */,
 				5D4B60F81A3D4F21001C91DE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

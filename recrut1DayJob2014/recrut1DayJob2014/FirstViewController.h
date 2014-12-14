@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "APIController.h"
+#import "Const.m"
 
-@interface FirstViewController : UIViewController
-
-
+@interface FirstViewController : UIViewController 
+- (NSMutableArray *) getImageURLsFromJson:(NSString *)json;
 @end
 
