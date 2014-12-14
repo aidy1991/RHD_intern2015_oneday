@@ -16,3 +16,5 @@ static NSInteger const IMAGE_MARGINE = 20;
 static NSInteger const IMAGE_NUMBER_YOKO = 2;
 static NSInteger const IMAGE_NUMBER_TATE = 3;
 static NSInteger const IMAGE_WIDTH = 130;
+static NSInteger const IMAGE_SIZE = 130;
+

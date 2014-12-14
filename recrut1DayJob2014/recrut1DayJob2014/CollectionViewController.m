@@ -73,9 +73,12 @@ static NSString * const reuseIdentifier = @"Cell";
                 NSData *dt = [NSData dataWithContentsOfURL:
                               [NSURL URLWithString:url]];
                 UIImage *image = [[UIImage alloc] initWithData:dt];
-                double ratio = image.size.height / image.size.width;
+                double isTate = image.size.height > image.size.width;
+                double widthRatio = (isTate) ? image.size.width / image.size.height : 1;
+                double heightRatio = (isTate) ? 1 : image.size.height / image.size.width;
+
                 
-                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMAGE_WIDTH, IMAGE_WIDTH * ratio)];
+                UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMAGE_SIZE * widthRatio, IMAGE_SIZE * heightRatio)];
                 imageView.image = image;
                 [imageURLs_ addObject:imageView];
             }
