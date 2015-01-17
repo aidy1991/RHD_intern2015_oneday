@@ -39,7 +39,6 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     //ボタンの準備
-    //changeButton = [[UIButton alloc] initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
